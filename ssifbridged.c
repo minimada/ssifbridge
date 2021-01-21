@@ -398,6 +398,8 @@ done:
 		MSG_ERR("Failed to send response (ret: %d)\n", r);
 	}
 
+	sd_bus_message_unref(resp_msg);
+
 	return r;
 }
 
